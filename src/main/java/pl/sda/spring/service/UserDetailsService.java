@@ -2,6 +2,7 @@ package pl.sda.spring.service;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import pl.sda.spring.model.User;
 import pl.sda.spring.repository.UserRepository;
@@ -26,4 +27,10 @@ public class UserDetailsService implements org.springframework.security.core.use
         return userRepository.findAll();
     }
 
+/*
+    Generator hasel
+    public static void main(String...args) {
+        System.out.println(new BCryptPasswordEncoder().encode("test"));
+    }
+*/
 }

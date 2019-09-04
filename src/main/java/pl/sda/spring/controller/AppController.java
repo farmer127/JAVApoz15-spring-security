@@ -21,6 +21,10 @@ public class AppController {
     public ModelAndView getAdminPage() {
         return new ModelAndView("admin");
     }
+    @GetMapping("/superUser")
+    public ModelAndView getSuperUserPage(){
+        return new ModelAndView("superUser");
+    }
 
     @GetMapping("/accessDenied")
     public ModelAndView getAccessDeniedPage() {
